@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang Anh & Max</title>
+
+  <!-- Các thông tin khác cho Open Graph -->
+  <meta property="og:title" content="Trang Anh & Max" />
+  <meta property="og:description" content="28.03.2026" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:image" content="https://i.postimg.cc/5tqkmvv8/thumbnail.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="400">
+
+  <link rel="stylesheet" href="dist/css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <input type="checkbox" name="" id="nav-toggle" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#greeting">Gửi những người thân thương</a></li>
+          <li><a href="#couple">Hẹn ngày mình gặp gỡ</a></li>
+          <li><a href="#our-story">Chuyện chúng mình </a></li>
+          <li><a href="#photos">Vì chúng ta gìn giữ</a></li>
+          <li><a href="#rsvp">Xác nhận khách mời</a></li>
+          <li><a href="#qrcode">Gửi quà mừng cưới</a></li>
+          <li><a href="#thankyou">Lời cảm ơn đặc biệt</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- SECTION 1: COVER / ENVELOPE -->
+    <section id="cover" class="cover">
+      <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/oanh-dong/cover.webp" alt="cover" class="fade-down">
+    </section>
+
+    <!-- SECTION 2: OPEN LETTER / GREETING -->
+    <section id="greeting" class="greeting">
+      <div class="content">
+        <h2 class="fade-down">Gửi những người </br> Thân Thương</h2>
+        <p class="fade-right">
+          Gửi đến những người thân thương của chúng mình, những người đã luôn hiện diện bằng sự ấm áp và yêu thương.
+          Hôm nay, chúng mình xin được chia sẻ một tin vui nhỏ. 
+        </p>
+        <div class="signature fade-up">
+          <div class="wife-name">
+            <p>Trang Anh</p>
+          </div>
+          <div class="img-box">
+            <img src="assets/images/logo.webp" alt="Logo couple" class="logo-couple">
+          </div>
+          <div class="husband-name">
+            <p>Max</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COUPLE INTRO -->
+    <section id="couple" class="couple">
+      <h2 class="fade-up">Hẹn ngày mình gặp gỡ</h2>
+      <div class="couple-photo">
+        <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/Main%20pic%20slide%203.jpg" alt="Oanh & Đồng" class="flip-vertical-left" />
+      </div>
+      <div class="save-the-date">
+        <p class="fade-right">save the date</p>
+      </div>
+      <div class="subtext fade-down">
+        <p>
+          Chúng mình đã chọn yêu thương, chọn đồng hành <br>
+          và chọn một ngày thật đẹp để về chung một nhà. <br>
+          Rất mong được chia sẻ khoảnh khắc này cùng bạn 🤍
+        </p>
+      </div>
+      <div class="date-time">
+        <p class="date fade-right">28.03.2026</p>
+        <p class="time fade-right">17:30 - Thứ Bảy</p>
+      </div>
+      <div class="countdown">
+        <div class="months item">
+          <p class="value months" id="months">00</p>
+          <p class="title">Tháng</p>
+        </div>
+        <div class="weeks item">
+          <p class="value weeks" id="weeks">00</p>
+          <p class="title">Tuần</p>
+        </div>
+        <div class="days item">
+          <p class="value days" id="days">00</p>
+          <p class="title">Ngày</p>
+        </div>
+        <div class="seconds item">
+          <p class="value seconds" id="seconds">00</p>
+          <p class="title">Giây</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LOCATION -->
+    <section id="location" class="location">
+      <h2 class="location-name fade-up">Trung tâm Hội nghị <br> Tiệc cưới The Opera</h2>
+      <p class="address fade-right">Lô 18A Lê Hồng Phong, Hải An, Hải Phòng</p>
+      <div class="map">
+        <img src="assets/images/map.webp" alt="Bản đồ địa điểm cưới" class="flip-vertical-left" />
+      </div>
+      <a target="_blank" href="https://share.google/CT53TPRbyWiDL9Ww0" class="btn-map fade-down">Xem bản đồ</a>
+
+      <div class="timeline">
+        <div class="logo">
+          <img src="assets/images/logo-timeline.webp" alt="Logo couple timeline" class="flip-vertical-left">
+        </div>
+        <p class="title fade-down">Timeline</p>
+        <div class="time-box">
+          <div class="timeline-item first">
+            <div class="icon">
+              <img src="assets/images/icons/camera.webp" alt="">
+            </div>
+            <p class="description">17:30 - Đón Khách</p>
+          </div>
+          <div class="timeline-item second">
+            <div class="icon">
+              <img src="assets/images/icons/rings.webp" alt="">
+            </div>
+            <p class="description">18:00 - Hôn Lễ</p>
+          </div>
+          <div class="timeline-item third">
+            <div class="icon">
+              <img src="assets/images/icons/cup.webp" alt="">
+            </div>
+            <p class="description">18:30 - Khai Tiệc</p>
+          </div>
+          <div class="timeline-item four">
+            <div class="icon">
+              <img src="assets/images/icons/party.webp" alt="">
+            </div>
+            <p class="description">19:00 - Giao Lưu</p>
+          </div>
+          <!-- <div class="timeline-item five">
+            <div class="icon">
+              <img src="assets/images/icons/heart.webp" alt="">
+            </div>
+            <p class="description">21:00 - Kết thúc</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: STORY / ABOUT -->
+    <section id="our-story" class="our-story">
+      <div class="logo">
+        <img src="assets/images/logo.webp" alt="" class="flip-vertical-left">
+      </div>
+      <h2 class="fade-up">Chuyện chúng mình</h2>
+      <h3 class="fade-right">Trang Anh & Max</h3>
+      <p class="subtext fade-down">ngày chúng mình </br> kể chuyện</p>
+      <div class="photo">
+        <img
+          src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/Love%20Story%20slide.jpeg"
+          alt="" class="animate-flip">
+      </div>
+      <div class="text">
+        <p class="fade-right">
+          Mùa hè năm 2023, chúng mình gặp nhau như một sự sắp đặt dịu dàng của cuộc sống.
+          Tình yêu lớn lên chậm rãi, bình yên, và tự nhiên.
+          Để hôm nay, chúng mình chọn trở thành gia đình của nhau. 
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PHOTOS -->
+    <section id="photos" class="photos">
+      <h2 class="fade-up">Vì chúng ta </br> gìn giữ</h2>
+      <p class="fade-right">Một vài khoảnh khắc nhỏ chúng mình muốn cất giữ,
+        trước khi chính thức gọi nhau hai tiếng "Vợ Chồng"
+        Nhẹ nhàng thôi, nhưng đủ để trái tim nhớ mãi ✨</p>
+      <div class="photo-grid">
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/HHL00224.jpg"
+                alt="" style="object-position: 50% 30%;">
+            </div>
+          </div>
+          <div class="column flip-vertical-left">
+            <div class="img-box">
+              <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/HHL00616.jpg"
+                alt="" style="object-position: 50% 35%;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/2D393AC5-2CCA-4708-8034-1C45BA25565A_1_105_c.jpeg"
+                alt="" style="object-position: 100% 45%;">
+            </div>
+          </div>
+          <div class="column">
+            <div class="img-box flip-vertical-left">
+              <img loading="lazy"
+                src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/B9C42682-A829-4AA9-9A24-6A524745125C_1_105_c.jpeg"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/A6E23B49-E68A-4B76-A3AA-F1FAFF1BF100_1_105_c.jpeg"
+                alt="">
+            </div>
+          </div>
+          <div class="column">
+            <div class="img-box flip-vertical-left">
+              <img loading="lazy"
+                src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/HHL00744.jpg"
+                alt="" style="object-position: 100% 52%;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/HHL01019a.jpg"
+                alt="" style="object-position: 100% 35%;">
+            </div>
+          </div>
+          <div class="column">
+            <div class="img-box flip-vertical-left">
+              <img loading="lazy" src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/HHL00883.jpg"
+                alt="" style="object-position: 100% 85%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: RSVP -->
+    <section id="rsvp" class="rsvp">
+      <h2 class="title fade-up">Xác nhận khách mời</h2>
+      <p class="subtext fade-right">Chúng mình rất mong được đón tiếp bạn chỉn chu nhất trong ngày đặc biệt ấy. Nếu bạn
+        có thể sắp xếp tham dự, hãy cho chúng mình biết <strong>trước ngày 15/3</strong> nhé để mọi thứ được chuẩn bị
+        thật chu đáo cho buổi gặp gỡ đáng nhớ này.</p>
+
+      <form id="rsvp-form">
+        <div class="form-group options-group fade-up">
+          <input type="radio" class="confirm" id="confirm-yes" value="yes" name="confirm" checked>
+          <label for="confirm-yes" class="radio-button confirm-yes">SẼ THAM DỰ</label>
+          <input type="radio" class="confirm" id="confirm-no" value="no" name="confirm">
+          <label for="confirm-no" class="radio-button confirm-no">TIẾC QUÁ! MÌNH </br> KHÔNG THỂ THAM DỰ</label>
+        </div>
+
+        <div class="form-group fade-right">
+          <input type="text" class="name input-text" id="name" name="name" placeholder="Tên Khách Mời" required>
+        </div>
+
+        <div class="form-group fade-right">
+          <input type="text" class="guest-number input-text" id="guest-number" name="guest_number"
+            placeholder="Số Người Đi Kèm (Không bao gồm bản thân bạn)">
+        </div>
+
+        <div class="wish-box">
+          <h2 class="fade-down">Một chút nhắn gửi từ </br> “người thương”</h2>
+          <p class="fade-up">Tr.Anh và Max luôn lắng nghe những mong muốn từ cả nhà. Nếu có thắc mắc, hay cần hỗ trợ bất
+            cứ điều gì, đừng ngại cả nhà cứ ghi rõ để tụi mình sắp xếp chu đáo nhé!</p>
+
+          <div class="form-group fade-right">
+            <textarea class="wish input-text" id="wish" name="wish" placeholder="Viết lời nhắn gửi:"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn fade-up">XÁC NHẬN</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="qrcode" id="qrcode">
+      <div class="wax-box">
+        <img src="assets/images/SÁP TA.png" id="qr-btn" alt="">
+      </div>
+      <div class="subtext">
+        Gửi quà mừng cưới dành tặng cô dâu và chú rể nhé!
+      </div>
+    </section>
+
+    <!-- SECTION 7: THANK YOU -->
+    <section id="thankyou" class="thankyou">
+      <h2 class="title fade-up">Lời cảm ơn </br> đặc biệt</h2>
+      <div class="photo">
+        <img
+          src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/Last_slide.jpg"
+          alt="" class="animate-flip" style="object-position: 100% 38%;">
+      </div>
+      <div class="subtext">
+        <div class="divider">
+          <img src="assets/images/icons/divider.webp" alt="" class="fade-right">
+        </div>
+        <div class="text">
+          <p class="fade-up">
+            Chúng mình biết rằng, chẳng có hành trình nào thật sự trọn vẹn nếu đi một mình.
+            Cảm ơn gia đình hai bên đã luôn yêu thương và thấu hiểu.
+            Cảm ơn bạn bè đã đồng hành, lắng nghe và chia sẻ từng niềm vui nhỏ.
+            Và cảm ơn nhau – vì đã chọn ở lại, cùng nhau trưởng thành, và gìn giữ tình yêu này.
+            Ngày hôm ấy sẽ là của tụi mình, nhưng niềm vui ấy – xin được chia sẻ chung với tất cả mọi người
+          </p>
+        </div>
+        <div class="divider">
+          <img src="assets/images/icons/divider.webp" alt="" class="fade-left">
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/gsap-animations.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Mốc thời gian đích (ví dụ ngày cưới)
+    const targetDate = new Date("2026-03-28T00:00:00");
+
+    // Tính tháng, tuần, ngày thực tế (không tính giây)
+    function updateDateParts() {
+      const now = new Date();
+
+      if (now >= targetDate) {
+        document.getElementById("countdown").textContent = "Đã tới ngày đặc biệt!";
+        clearInterval(dateTimer);
+        clearInterval(secondTimer);
+        return;
+      }
+
+      let temp = new Date(now);
+      let months = 0;
+
+      // Tăng tháng bằng cách +1 từng tháng (KHÔNG overflow)
+      while (true) {
+        let next = new Date(temp);
+        next.setMonth(next.getMonth() + 1);
+
+        if (next > targetDate) break;
+
+        temp = next;
+        months++;
+      }
+
+      // Tính ms còn lại sau khi trừ tháng
+      let remainingMs = targetDate - temp;
+
+      let remainingDays = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
+      let weeks = Math.floor(remainingDays / 7);
+      let days = remainingDays % 7;
+
+      document.getElementById("months").textContent = String(months).padStart(2, "0");
+      document.getElementById("weeks").textContent = String(weeks).padStart(2, "0");
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+    }
+
+    // === Bộ đếm giây chạy từ 59 → 0 lặp lại ===
+    let seconds = 59;
+    function updateSeconds() {
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+      seconds = seconds > 0 ? seconds - 1 : 59;
+    }
+
+    // Cập nhật ban đầu
+    updateDateParts();
+    updateSeconds();
+
+    // Chạy định kỳ
+    const dateTimer = setInterval(updateDateParts, 60 * 1000); // cập nhật ngày/tháng mỗi phút
+    const secondTimer = setInterval(updateSeconds, 1000); // giây chạy đều
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.qrcode {
+    width: 100%;
+    aspect-ratio: 500 / 300;
+    background: url('../../assets/images/base-our-story-bg.webp') no-repeat center/cover;
+    .wax-box {
+        img {
+            width: 80px;
+            height: auto;
+        }
+    }
+}
+
+.qrcode-box {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.qrcode-box .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.qrcode-box .item .info {
+    margin-bottom: 2%;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.qrcode-box .item .qrcode-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrcode-box .item .qrcode-img img {
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+div:where(.swal2-container) div:where(.swal2-html-container) {
+    padding: 0 !important;
+}
+
+/* QR code */
+div:where(.swal2-container) img:where(.swal2-image) {
+    margin: 0 auto 1em !important;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+@media (max-width: 500px) {
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+        font-size: calc((16 / 500) * 100vw);
+    }
+
+    .qrcode-box .item .info {
+        font-size: calc((14 / 500) * 100vw);
+    }
+
+    div:where(.swal2-container) div:where(.swal2-actions) {
+        margin: calc((20/500) * 100vw);
+    }
+}

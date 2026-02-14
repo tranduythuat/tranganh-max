@@ -1,0 +1,160 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.location {
+    justify-content: start;
+    background: url('../../assets/images/location_bg.webp') no-repeat center/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 889;
+
+    .location-name {
+        margin-top: 26%;
+        font-size: 28px;
+        font-weight: 300;
+        color: $secondary-color;
+    }
+
+    .address {
+        font-size: 9px;
+        margin-bottom: 6%;
+    }
+
+    .map {
+        max-width: 211px;
+        width: 100%;
+        aspect-ratio: 211 / 195;
+        margin-bottom: 8%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .btn-map {
+        text-decoration: none;
+        color: #eeede8ff;
+        background-color: $secondary-color;
+        padding: 1% 8%;
+        border-radius: 5px;
+        margin-bottom: 8%;
+    }
+
+    .timeline {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .logo {
+            max-width: 37px;
+            width: 100%;
+            aspect-ratio: 37 / 58;
+            margin: 9% 0 5%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .title {
+            font-size: 16.38px;
+            color: #eeede8ff;
+            margin-bottom: 5%;
+        }
+        .time-box {
+            width: 31%;
+            .timeline-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10%;
+                .icon { 
+                    width: 15%;
+                    height: 20%;
+                    margin-right: 6%;
+                    @include flex-center;
+                    
+                    img {
+                        max-width: 15px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .description {
+                    width: 85%;
+                    font-size: 13.77px;
+                    color: #eeede8ff;
+                    text-align: left;
+                }
+            }
+
+            .timeline-item:nth-child(2) {
+                .icon {
+                    img {
+                        max-width: 20px;
+                    }
+                }
+            }
+
+            .timeline-item:nth-child(3) {
+                .icon {
+                    img {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .location-name {
+            font-size: calc((28 / 500) * 100vw);
+        }
+    
+        .address {
+            font-size: calc((9 / 500) * 100vw);
+        }
+    
+        .map {
+            max-width: calc((221 / 500) * 100vw);
+        }
+    
+        .btn-map {
+            border-radius: calc((5 / 500) * 100vw);
+        }
+    
+        .timeline {
+            .logo {
+                max-width: calc((37 / 500) * 100vw);
+            }
+    
+            .title {
+                font-size: calc((16.83 / 500) * 100vw);
+            }
+            .time-box {
+                .timeline-item {
+                    .icon { 
+                        img {
+                            max-width: calc((15 / 500) * 100vw);
+                        }
+                    }
+    
+                    .description {
+                        font-size: calc((13.77 / 500) * 100vw);
+                    }
+                }
+    
+                .timeline-item:nth-child(2) {
+                    .icon {
+                        img {
+                            max-width: calc((20 / 500) * 100vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

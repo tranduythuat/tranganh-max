@@ -1,0 +1,80 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.greeting {
+    background: url('../../assets/images/greeting.webp') no-repeat center/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 890;
+
+    .content {
+        width: 100%;
+        padding: 27%;
+        h2 {
+            font-size: 16.66px;
+            font-weight: 300;
+            color: $secondary-color;
+            padding-bottom: 20%;
+        }
+
+        p {
+            text-align: justify;
+            text-align-last: center;
+            padding-bottom: 20%;
+            line-height: 180%;
+        }
+
+        .signature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -11%;
+
+            .img-box {
+                @include flex-center;
+                margin: 0 8%;
+            }
+
+            img.logo-couple {
+                width: 25px;
+                height: auto;
+            }
+            
+            .wife-name, .husband-name {
+                @include flex-center;
+            }
+
+            p {
+                display: block;
+                font-size: 13px;
+                font-family: '1FTV-VIP-Bengoda', sans-serif;
+                font-weight: 300;
+                color: $secondary-color;
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            h2 {
+                font-size: calc((16.66px / 500px) * 100vw);
+            }
+    
+            p {
+                // font-size: 1.85vw;
+                font-size: calc(($base-font-size / 500px) * 100vw);
+            }
+
+            .signature {
+                img.logo-couple {
+                    width: calc((25 / 500) * 100vw);
+                }
+    
+                p {
+                    font-size: calc((13 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

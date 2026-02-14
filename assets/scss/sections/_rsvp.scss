@@ -1,0 +1,170 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rsvp {
+    background: url('../../assets/images/rsvp-bg.webp') no-repeat center/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 890;
+    justify-content: start;
+
+    h2.title {
+        font-size: 16.66px;
+        font-weight: 300;
+        color: $secondary-color;
+        margin-top: 26%;
+        margin-bottom: 6%;
+    }
+
+    p.subtext {
+        padding: 0 21%;
+        text-align: justify;
+        text-align-last: center;
+        line-height: 180%;
+    }
+
+    #rsvp-form {
+        width: 100%;
+        padding: 12% 20% 5%;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 3%;
+        input[type="radio"] {
+            display: none;
+        }
+        
+        .radio-button {
+            @include flex-center;
+            font-size: 8px;
+            // font-size: .8em;
+            padding: 1% 0;
+            width: 138px;
+            border-radius: 6px;
+            border: 1px solid $secondary-color;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:hover+.radio-button {
+            background-color: $secondary-color;
+            color: #ffffff;
+            transition: .3s ease;
+        }
+
+        input[type="radio"]:checked+.radio-button {
+            background-color: $secondary-color;
+            color: #ffffff;
+            border-color: $secondary-color;
+        }
+
+        input.input-text {
+            width: 100%;
+            padding: 2% 3%;
+            border-radius: 6px;
+            border: 1px solid $secondary-color;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            background-color: transparent;
+            font-size: 11.2px;
+        }
+
+        input.input-text::placeholder {
+            font-size: .8em;
+        }
+
+        textarea.input-text {
+            font-size: $base-font-size;
+            max-width: 311px;
+            width: 100%;
+            aspect-ratio: 311 / 71;
+            border-radius: 8px;
+            border: 1px solid $secondary-color;
+            background-color: transparent;
+            padding: 3% 4%;
+            box-sizing: border-box;
+            outline: none;
+            margin-bottom: 8%;
+        }
+    }
+
+    .form-group.options-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wish-box {
+        text-align: center;
+
+        h2 {
+            font-size: 16.66px;
+            font-weight: 300;
+            color: $secondary-color;
+            margin-top: 20%;
+        }
+    
+        p {
+            text-align: justify;
+            text-align-last: center;
+            padding: 10% 3%;
+            line-height: 180%;
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: center;
+        button.btn {
+            background-color: $secondary-color;
+            font-family: 'Lora', sans-serif;
+            border: none;
+            color: #fff;
+            padding: 3% 12%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        button.btn:hover {
+            color: #fff;
+            background-color: $primary-color;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2.title {
+            font-size: calc((16.66px / 500px) * 100vw);
+        }
+    
+        .form-group {
+            .radio-button {
+                font-size: calc((8 / 500) * 100vw);
+                width:  calc((138 / 500) * 100vw);
+            }
+
+            input.input-text {
+                font-size: 2.25vw;
+            }
+
+            textarea.input-text {
+                font-size: 1.8vw;
+            }
+        }
+
+        .wish-box {
+            h2 {
+                font-size: calc((16.66px / 500px) * 100vw);
+            }
+        }
+
+        .form-actions {
+            button.btn {
+                font-size: 2.2vw;
+            }
+        }
+    }
+}
