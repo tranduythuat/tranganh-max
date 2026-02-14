@@ -4,7 +4,7 @@
 .qrcode {
     width: 100%;
     aspect-ratio: 500 / 300;
-    background: url('../../assets/images/base-our-story-bg.webp') no-repeat center/cover;
+    background: url('../../assets/images/base_bg.jpg') no-repeat center/ 100% auto;
     .wax-box {
         img {
             width: 80px;
@@ -55,8 +55,9 @@ div:where(.swal2-container) div:where(.swal2-html-container) {
 /* QR code */
 div:where(.swal2-container) img:where(.swal2-image) {
     margin: 0 auto 1em !important;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 1.7;
     object-fit: cover;
+    object-position: 100% 45%;
 }
 
 @media (max-width: 500px) {

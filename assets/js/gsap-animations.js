@@ -28,7 +28,7 @@ function gsapFadeIn(selector) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 80%",
           toggleActions: "play none none none",
         },
       }
@@ -48,7 +48,7 @@ function gsapFadeRight(selector) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 80%",
           toggleActions: "play none none none",
         },
       }
@@ -68,7 +68,7 @@ function gsapFadeLeft(selector) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 80%",
           toggleActions: "play none none none",
         },
       }
@@ -88,7 +88,7 @@ function gsapFadeUp(selector) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 80%",
           toggleActions: "play none none none",
         },
       }
@@ -108,7 +108,7 @@ function gsapFadeDown(selector) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 80%",
           toggleActions: "play none none none",
         },
       }
@@ -127,7 +127,7 @@ function gsapFlipVerticalLeft(selector) {
       transformOrigin: "center center",
       scrollTrigger: {
         trigger: el,
-        start: "top 85%",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
     });
@@ -146,7 +146,7 @@ function gsapRotateBottomLeft(selector) {
       transformOrigin: "left bottom",
       scrollTrigger: {
         trigger: el,
-        start: "top 85%",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
     });
@@ -165,7 +165,7 @@ function gsapRotateBottomRight(selector) {
       transformOrigin: "right bottom",
       scrollTrigger: {
         trigger: el,
-        start: "top 85%",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
     });
@@ -184,7 +184,7 @@ function gsapRollInLeft(selector) {
       transformOrigin: "center center",
       scrollTrigger: {
         trigger: el,
-        start: "top 85%",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
     });
@@ -203,7 +203,7 @@ function gsap_rotate_bl__float(selector) {
       transformOrigin: "left bottom",
       scrollTrigger: {
         trigger: el,
-        start: "top 85%",
+        start: "top 80%",
         toggleActions: "play none none none",
       },
       onComplete: () => {

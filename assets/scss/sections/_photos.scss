@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .photos {
-    background: url('../../assets/images/photo-bg.webp') no-repeat center/cover;
+    background: url('../../assets/images/base_bg.jpg') no-repeat center/cover;
     max-width: 500px;
     width: 100%;
     aspect-ratio: 500 / 890;
