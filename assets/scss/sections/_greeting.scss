@@ -42,15 +42,11 @@
             
             .wife-name, .husband-name {
                 @include flex-center;
-            }
-
-            p {
-                display: block;
                 font-size: 13px;
                 font-family: '1FTV-VIP-Bengoda', sans-serif;
                 font-weight: 300;
                 color: $secondary-color;
-                padding: 0;
+                line-height: 1;
             }
         }
     }
@@ -67,12 +63,12 @@
             }
 
             .signature {
+                .wife-name, .husband-name {
+                    font-size: calc((13 / 500) * 100vw);
+                }
+
                 img.logo-couple {
                     width: calc((25 / 500) * 100vw);
-                }
-    
-                p {
-                    font-size: calc((13 / 500) * 100vw);
                 }
             }
         }

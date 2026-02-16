@@ -2,10 +2,10 @@
 @use "../mixins" as *;
 
 .photos {
-    background: url('../../assets/images/base_bg.jpg') no-repeat center/cover;
+    background: url('../../assets/images/album_bg.jpg') no-repeat center / cover;
     max-width: 500px;
     width: 100%;
-    aspect-ratio: 500 / 890;
+    padding-top: 7%;
 
     h2 {
         font-size: 19.68px;
@@ -24,12 +24,12 @@
 
     .photo-grid {
         width: 100%;
-        padding: 0 7%;
+        padding: 0 7% 7%;
         .row {
             display: flex;
             max-width: 432px;
             width: 100%;
-            aspect-ratio: 432 / 144;
+            aspect-ratio: 432 / 184;
 
             .column {
                 margin: 1.1%;
