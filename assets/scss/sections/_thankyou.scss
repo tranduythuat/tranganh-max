@@ -9,8 +9,8 @@
     aspect-ratio: 500 / 890;
 
     h2 {
-        font-size: 20.83px;
-        font-weight: 300;
+        font-size: 25px;
+        font-weight: 600;
         color: $secondary-color;
         margin-bottom: 6%;
     }
@@ -57,7 +57,7 @@
 
     @media (max-width: 500px) {
         h2 {
-            font-size: calc((20.83px / 500px) * 100vw);
+            font-size: calc((25px / 500px) * 100vw);
         }
     
         .photo {

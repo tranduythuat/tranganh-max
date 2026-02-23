@@ -9,11 +9,11 @@
     justify-content: start;
 
     h2.title {
-        font-size: 16.66px;
-        font-weight: 300;
+        font-size: 21px;
+        font-weight: 600;
         color: $secondary-color;
-        margin-top: 26%;
-        margin-bottom: 6%;
+        margin-top: 22%;
+        margin-bottom: 2%;
     }
 
     p.subtext {
@@ -25,7 +25,7 @@
 
     #rsvp-form {
         width: 100%;
-        padding: 12% 20% 5%;
+        padding: 8% 20% 5%;
     }
 
     .form-group {
@@ -37,8 +37,7 @@
         
         .radio-button {
             @include flex-center;
-            font-size: 8px;
-            // font-size: .8em;
+            font-size: 10px;
             padding: 1% 0;
             width: 138px;
             border-radius: 6px;
@@ -67,7 +66,8 @@
             box-sizing: border-box;
             outline: none;
             background-color: transparent;
-            font-size: 11.2px;
+            font-size: 14px;
+            font-family: 'Lora', sans-serif;
         }
 
         input.input-text::placeholder {
@@ -75,17 +75,18 @@
         }
 
         textarea.input-text {
-            font-size: $base-font-size;
+            font-size: 12px;
             max-width: 311px;
             width: 100%;
-            aspect-ratio: 311 / 71;
+            aspect-ratio: 311 / 83;
             border-radius: 8px;
             border: 1px solid $secondary-color;
             background-color: transparent;
             padding: 3% 4%;
             box-sizing: border-box;
             outline: none;
-            margin-bottom: 8%;
+            margin-bottom: 4%;
+            font-family: 'Lora', sans-serif;
         }
     }
 
@@ -101,13 +102,13 @@
             font-size: 16.66px;
             font-weight: 300;
             color: $secondary-color;
-            margin-top: 20%;
+            margin-top: 16%;
         }
     
         p {
             text-align: justify;
             text-align-last: center;
-            padding: 10% 3%;
+            padding: 6% 3%;
             line-height: 180%;
         }
     }
@@ -137,21 +138,21 @@
 
     @media (max-width: 500px) {
         h2.title {
-            font-size: calc((16.66px / 500px) * 100vw);
+            font-size: calc((21px / 500px) * 100vw);
         }
     
         .form-group {
             .radio-button {
-                font-size: calc((8 / 500) * 100vw);
+                font-size: calc((10 / 500) * 100vw);
                 width:  calc((138 / 500) * 100vw);
             }
 
             input.input-text {
-                font-size: 2.25vw;
+                font-size: calc((14 / 500) * 100vw);
             }
 
             textarea.input-text {
-                font-size: 1.8vw;
+                font-size: calc((12 / 500) * 100vw);
             }
         }
 
@@ -163,7 +164,7 @@
 
         .form-actions {
             button.btn {
-                font-size: 2.2vw;
+                font-size: calc((11 / 500) * 100vw);
             }
         }
     }

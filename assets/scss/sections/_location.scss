@@ -16,7 +16,7 @@
     }
 
     .address {
-        font-size: 9px;
+        font-size: 12px;
         margin-bottom: 6%;
     }
 
@@ -111,11 +111,11 @@
     }
     @media (max-width: 500px) {
         .location-name {
-            font-size: calc((28 / 500) * 100vw);
+            font-size: calc((39/ 500) * 100vw);
         }
     
         .address {
-            font-size: calc((9 / 500) * 100vw);
+            font-size: calc((12 / 500) * 100vw);
         }
     
         .map {

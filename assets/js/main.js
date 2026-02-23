@@ -46,6 +46,22 @@ document.addEventListener("DOMContentLoaded", () => {
   .from(".four", { x: -100, opacity: 0 }, "-=0.5")    
   .from(".five", { x: -100, opacity: 0 }, "-=0.5");    
 
+  const tl_dresscode = gsap.timeline({
+    repeatDelay: 0,  // delay giữa các lần lặp
+    defaults: { duration: .8, ease: "power2.out" }, // giá trị mặc định
+    scrollTrigger: {
+      trigger: ".colors-grid",
+      start: "top 85%", // khi phần tử xuất hiện 80% trong viewport
+    }
+  });
+
+  tl_dresscode.from(".color1", { x: -100, opacity: 0 })       
+  .from(".color2", { x: -100, opacity: 0 }, "-=0.5")     
+  .from(".color3", { x: -100, opacity: 0 }, "-=0.5") 
+  .from(".color4", { x: -100, opacity: 0 }, "-=0.5")    
+  .from(".color5", { x: -100, opacity: 0 }, "-=0.5");   
+
+
   const toggle = document.getElementById('nav-toggle');
   const menu = document.querySelector('.menu-items');
   const icon = document.querySelector('.hamburger-lines');

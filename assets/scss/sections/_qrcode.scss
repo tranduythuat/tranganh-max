@@ -3,13 +3,17 @@
 
 .qrcode {
     width: 100%;
-    aspect-ratio: 500 / 300;
-    background: url('../../assets/images/base_bg.jpg') no-repeat center/ 100% auto;
+    aspect-ratio: 500 / 890;
+    background: url('../../assets/images/base_bg.jpg') no-repeat center/ cover;
     .wax-box {
         img {
-            width: 80px;
+            width: 140px;
             height: auto;
         }
+    }
+    .subtext {
+        font-size: 15px;
+        margin-top: 5%;
     }
 }
 
@@ -61,6 +65,17 @@ div:where(.swal2-container) img:where(.swal2-image) {
 }
 
 @media (max-width: 500px) {
+    .qrcode {
+        .wax-box {
+            img {
+                width: calc((140 / 500) * 100vw);
+            }
+        }
+        .subtext {
+            font-size: calc((15 / 500) * 100vw);
+        }
+    }
+
     div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
         font-size: calc((16 / 500) * 100vw);
     }

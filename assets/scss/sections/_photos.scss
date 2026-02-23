@@ -8,8 +8,8 @@
     padding-top: 7%;
 
     h2 {
-        font-size: 19.68px;
-        font-weight: 300;
+        font-size: 23px;
+        font-weight: 600;
         color: $secondary-color;
         margin-bottom: 5%;
     }
@@ -18,7 +18,7 @@
         padding: 0 13%;
         text-align: justify;
         text-align-last: center;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         line-height: 180%;
     }
 
@@ -75,7 +75,7 @@
 
     @media (max-width: 500px) {
         h2 {
-            font-size: calc((19.68 / 500) * 100vw);
+            font-size: calc((23 / 500) * 100vw);
         }
     }
 }

@@ -9,8 +9,8 @@
     aspect-ratio: 500 / 890;
 
     h2 {
-        font-size: 16.66px;
-        font-weight: 300;
+        font-size: 25px;
+        font-weight: 600;
         color: $secondary-color;
         padding-bottom: 6%;
     }
@@ -34,7 +34,7 @@
             color: #2c2722ff;
             font-weight: 300;
             transform: rotate(-5deg);
-            font-size: 40px;
+            font-size: 50px;
         }
     }
 
@@ -48,7 +48,7 @@
 
     .date-time {
         color: $secondary-color;
-        padding: 8% 0;
+        padding: 6% 0;
         .date {
             font-size: 37px;
         }
@@ -75,7 +75,7 @@
             }
 
             p.title {
-                font-size: 8.4px;
+                font-size: 11px;
                 text-transform: uppercase;
             }
         }
@@ -83,42 +83,42 @@
     
     @media (max-width: 500px) {
         h2 {
-            font-size: calc((16.66px / 500px) * 100vw);
+            font-size: calc((25px / 500px) * 100vw);
         }
 
         .couple-photo {
-            max-width: 40vw;
+            max-width: calc((200px / 500px) * 100vw);
         }
     
         .save-the-date {
             p {
-                font-size: calc((40px / 500px) * 100vw);
+                font-size: calc((50px / 500px) * 100vw);
             }
         }
     
-        .subtext {
-            p {
-                font-size: calc(($base-font-size / 500px) * 100vw);
-            }
-        }
+        // .subtext {
+        //     p {
+        //         font-size: calc(($base-font-size / 500px) * 100vw);
+        //     }
+        // }
 
         .date-time {
             .date {
-                font-size: 7.5vw;
+                font-size: calc((37px / 500px) * 100vw);
             }
             .time {
-                font-size: 4.8vw;
+                font-size: calc((24px / 500px) * 100vw);
             }
         }
 
         .countdown {
             .item {
                 p.value {
-                    font-size: 7.8vw;
+                    font-size: calc((39px / 500px) * 100vw);
                 }
     
                 p.title {
-                    font-size: 1.8vw;
+                    font-size: calc((11 / 500) * 100vw);
                 }
             }
         }

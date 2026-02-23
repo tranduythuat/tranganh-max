@@ -9,44 +9,46 @@
 
     .content {
         width: 100%;
-        padding: 27%;
         h2 {
-            font-size: 16.66px;
-            font-weight: 300;
+            font-size: 23px;
+            font-weight: 600;
             color: $secondary-color;
-            padding-bottom: 20%;
+            padding-bottom: 10%;
         }
 
         p {
             text-align: justify;
             text-align-last: center;
-            padding-bottom: 20%;
             line-height: 180%;
+            padding: 0 20% 10%;
         }
 
         .signature {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: -11%;
+            width: 58%;
+            margin: 0 auto;
 
             .img-box {
                 @include flex-center;
                 margin: 0 8%;
+                width: 10%;
+                img.logo-couple {
+                    width: 45px;
+                    height: auto;
+                }
             }
 
-            img.logo-couple {
-                width: 25px;
-                height: auto;
-            }
             
             .wife-name, .husband-name {
                 @include flex-center;
-                font-size: 13px;
+                font-size: 23px;
                 font-family: '1FTV-VIP-Bengoda', sans-serif;
                 font-weight: 300;
                 color: $secondary-color;
                 line-height: 1;
+                width: 45%;
             }
         }
     }
@@ -54,21 +56,18 @@
     @media (max-width: 500px) {
         .content {
             h2 {
-                font-size: calc((16.66px / 500px) * 100vw);
+                font-size: calc((22px / 500px) * 100vw);
             }
     
-            p {
-                // font-size: 1.85vw;
-                font-size: calc(($base-font-size / 500px) * 100vw);
-            }
-
             .signature {
                 .wife-name, .husband-name {
-                    font-size: calc((13 / 500) * 100vw);
+                    font-size: calc((23 / 500) * 100vw);
                 }
 
-                img.logo-couple {
-                    width: calc((25 / 500) * 100vw);
+                .img-box {
+                    img.logo-couple {
+                        width: calc((45 / 500) * 100vw);
+                    }
                 }
             }
         }
