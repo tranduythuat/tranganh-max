@@ -993,9 +993,6 @@ div:where(.swal2-container) img:where(.swal2-image) {
   .thankyou .subtext .divider img {
     width: 5.4vw;
   }
-  .thankyou .subtext .text p {
-    font-size: 1.866vw;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
