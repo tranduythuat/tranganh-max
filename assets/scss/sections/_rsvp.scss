@@ -8,6 +8,12 @@
     aspect-ratio: 500 / 890;
     justify-content: start;
 
+    &.en {
+        h2.title {
+            margin-top: 26%;
+        }
+    }
+
     h2.title {
         font-size: 21px;
         font-weight: 600;
@@ -23,7 +29,7 @@
         line-height: 180%;
     }
 
-    #rsvp-form {
+    #rsvp-form, #rsvp-form-en {
         width: 100%;
         padding: 8% 20% 5%;
     }
@@ -43,6 +49,7 @@
             border-radius: 6px;
             border: 1px solid $secondary-color;
             cursor: pointer;
+            text-transform: uppercase;
         }
 
         input[type="radio"]:hover+.radio-button {
@@ -111,6 +118,15 @@
             padding: 6% 3%;
             line-height: 180%;
         }
+
+        &.en {
+            h2 {
+                margin-top: 14%;
+            }
+            p {
+                padding: 3% 0 5%;
+            }
+        }
     }
 
     .form-actions {
@@ -128,6 +144,7 @@
             border-radius: 8px;
             font-size: 11px;
             cursor: pointer;
+            text-transform: uppercase;
         }
 
         button.btn:hover {

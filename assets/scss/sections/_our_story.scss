@@ -51,6 +51,10 @@
         text-align: justify;
         text-align-last: center;
         padding: 0 17%;
+
+        &.en {
+            padding: 0 15%;
+        }
         
         p {
             margin-bottom: 5%;

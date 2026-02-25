@@ -478,7 +478,13 @@ header {
   margin-bottom: 5%;
 }
 .location .timeline .time-box {
-  width: 31%;
+  width: 29%;
+}
+.location .timeline .time-box.time-box-en {
+  width: 55%;
+}
+.location .timeline .time-box.time-box-en .timeline-item .icon {
+  margin-right: 1%;
 }
 .location .timeline .time-box .timeline-item {
   display: flex;
@@ -495,7 +501,7 @@ header {
   align-items: center;
 }
 .location .timeline .time-box .timeline-item .icon img {
-  max-width: 15px;
+  max-width: 20px;
   width: 100%;
   height: auto;
 }
@@ -506,10 +512,10 @@ header {
   text-align: left;
 }
 .location .timeline .time-box .timeline-item:nth-child(2) .icon img {
-  max-width: 20px;
+  max-width: 28px;
 }
 .location .timeline .time-box .timeline-item:nth-child(3) .icon img {
-  width: 55%;
+  max-width: 17px;
 }
 @media (max-width: 500px) {
   .location .location-name {
@@ -528,13 +534,16 @@ header {
     font-size: 3.366vw;
   }
   .location .timeline .time-box .timeline-item .icon img {
-    max-width: 3vw;
+    max-width: 4vw;
   }
   .location .timeline .time-box .timeline-item .description {
     font-size: 2.754vw;
   }
   .location .timeline .time-box .timeline-item:nth-child(2) .icon img {
     max-width: 4vw;
+  }
+  .location .timeline .time-box .timeline-item:nth-child(3) .icon img {
+    max-width: 3.4vw;
   }
 }
 
@@ -628,6 +637,9 @@ header {
   text-align: justify;
   text-align-last: center;
   padding: 0 17%;
+}
+.our-story .text.en {
+  padding: 0 15%;
 }
 .our-story .text p {
   margin-bottom: 5%;
@@ -725,6 +737,9 @@ header {
   aspect-ratio: 500/890;
   justify-content: start;
 }
+.rsvp.en h2.title {
+  margin-top: 26%;
+}
 .rsvp h2.title {
   font-size: 21px;
   font-weight: 600;
@@ -738,7 +753,7 @@ header {
   text-align-last: center;
   line-height: 180%;
 }
-.rsvp #rsvp-form {
+.rsvp #rsvp-form, .rsvp #rsvp-form-en {
   width: 100%;
   padding: 8% 20% 5%;
 }
@@ -759,6 +774,7 @@ header {
   border-radius: 6px;
   border: 1px solid #5a3a21;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .rsvp .form-group input[type=radio]:hover + .radio-button {
   background-color: #5a3a21;
@@ -818,6 +834,12 @@ header {
   padding: 6% 3%;
   line-height: 180%;
 }
+.rsvp .wish-box.en h2 {
+  margin-top: 14%;
+}
+.rsvp .wish-box.en p {
+  padding: 3% 0 5%;
+}
 .rsvp .form-actions {
   display: flex;
   justify-content: center;
@@ -834,6 +856,7 @@ header {
   border-radius: 8px;
   font-size: 11px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .rsvp .form-actions button.btn:hover {
   color: #fff;
