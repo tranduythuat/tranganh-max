@@ -555,28 +555,29 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 1%;
+  gap: 4%;
   margin-top: 5%;
 }
 .dresscode .colors-grid .item {
-  max-width: 30px;
+  max-width: 33px;
   width: 100%;
 }
 .dresscode .colors-grid .item .color {
-  max-width: 30px;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
+  margin: auto;
+}
+.dresscode .colors-grid .item .label {
+  text-align: center;
+  margin-top: 20%;
 }
 @media (max-width: 500px) {
   .dresscode h2 {
     font-size: 7vw;
   }
   .dresscode .colors-grid .item {
-    max-width: 6vw;
-  }
-  .dresscode .colors-grid .item .color {
-    max-width: 6vw;
+    max-width: 6.6vw;
   }
 }
 
