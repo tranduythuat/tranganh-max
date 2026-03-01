@@ -217,7 +217,7 @@ header {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.animate-flip {
+.animate-flip, [data-animate=flip], [data-animate=flip-yoyo] {
   transform-origin: left center;
   transform: rotateY(-120deg) scale(0.9);
   opacity: 0;
@@ -226,7 +226,7 @@ header {
   transition: none;
 }
 
-.animate-flip.active {
+.animate-flip.active, [data-animate=flip].active, [data-animate=flip-yoyo].active {
   opacity: 1;
   transform: rotateY(0deg);
 }
@@ -1016,6 +1016,89 @@ div:where(.swal2-container) img:where(.swal2-image) {
   }
   .thankyou .subtext .divider img {
     width: 5.4vw;
+  }
+}
+
+.letter-section {
+  width: 100%;
+  max-width: 500px;
+}
+.letter-section .content {
+  width: 100%;
+  aspect-ratio: 500/890;
+  background: url("../../assets/images/our-story-bg.webp") no-repeat center/cover, url("../../assets/images/base_bg.jpg") no-repeat bottom/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #5a3a21;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.439);
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+  font-family: "Lora", sans-serif;
+}
+.letter-section .content .invitation {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #2c2722;
+}
+.letter-section .content .logo {
+  margin: 10% 0 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.letter-section .content .logo img {
+  max-width: 62px;
+  width: 100%;
+  height: auto;
+}
+.letter-section .content .names {
+  margin-bottom: 4%;
+  font-size: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 15%;
+}
+.letter-section .content .welcome {
+  font-size: 9.5px;
+  margin-bottom: 5%;
+  color: #2c2722;
+  text-align: center;
+}
+.letter-section .content .open-card {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #2c2722;
+  background-color: transparent;
+  font-size: 9.5px;
+  border: 1px solid #2c2722;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 1.5%;
+  line-height: 1;
+  width: 45%;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .letter-section .content .invitation {
+    font-size: 2.8vw;
+  }
+  .letter-section .content .logo img {
+    max-width: 12.4vw;
+  }
+  .letter-section .content .names {
+    font-size: 8.6vw;
+  }
+  .letter-section .content .welcome, .letter-section .content .subtext, .letter-section .content .open-card {
+    font-size: 1.9vw;
   }
 }
 

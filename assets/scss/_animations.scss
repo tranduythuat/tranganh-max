@@ -13,7 +13,7 @@
 }
 
 // Hiệu ứng flip-in 3D
-.animate-flip {
+.animate-flip, [data-animate="flip"], [data-animate="flip-yoyo"] {
     transform-origin: left center;
     transform: rotateY(-120deg) scale(0.9);
     opacity: 0;
@@ -22,7 +22,7 @@
     transition: none;
 }
 
-.animate-flip.active {
+.animate-flip.active, [data-animate="flip"].active, [data-animate="flip-yoyo"].active {
     opacity: 1;
     transform: rotateY(0deg);
 }
