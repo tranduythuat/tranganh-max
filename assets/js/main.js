@@ -101,8 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
   qrcode.addEventListener("click", toggleQR);
 
   const form = document.forms["rsvp-form"];
+  const formEn = document.forms["rsvp-form-en"];
   if (form) {
-    form.addEventListener("submit", (e) => handleFormSubmit(e));
+    form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
+  }
+
+  if (formEn) {
+    formEn.addEventListener("submit", (e) => handleFormSubmit(e, "en"));
   }
 });
 
@@ -133,70 +138,110 @@ function toggleQR(e) {
   });
 }
 
-async function handleFormSubmit(e) {
+async function handleFormSubmit(e, lang = "en") {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
-  console.log("🚀 ~ handleFormSubmit ~ data:", data);
 
   const {
-    name: name,
-    confirm: confirm,
-    guest_number: guest_number,
-    wish: wish,
+    name,
+    confirm,
+    guest_number,
+    wish,
   } = data;
-  console.log("🚀 ~ handleFormSubmit 2~ data:", data);
 
-  // Thông báo khi bắt đầu gửi
+  // =========================
+  // i18n Messages
+  // =========================
+  const messages = {
+    vi: {
+      sendingTitle: "Đang gửi...",
+      sendingText: "Vui lòng chờ trong giây lát",
+      successTitle: "Thành công!",
+      successText:
+        "Cảm ơn bạn đã xác nhận. Thông tin đã được chuyển đến cô dâu và chú rể rồi nha.",
+      errorTitle: "Lỗi!",
+      errorServer: "OPPS! Không tìm thấy server",
+      errorRetry: "Thử lại",
+    },
+    en: {
+      sendingTitle: "Sending...",
+      sendingText: "Please wait a moment",
+      successTitle: "Success!",
+      successText:
+        "Thank you for your confirmation. Your information has been forwarded to the bride and groom.",
+      errorTitle: "Error!",
+      errorServer: "OPPS! Server not found",
+      errorRetry: "Try again",
+    },
+  };
+
+  const t = messages[lang] || messages.en;
+
+  // =========================
+  // Loading popup
+  // =========================
   Swal.fire({
-    title: 'Đang gửi ...',
-    text: "Vui lòng chờ trong giây lát",
+    title: t.sendingTitle,
+    text: t.sendingText,
     icon: "info",
     allowOutsideClick: false,
-    didOpen: () => {
-      Swal.showLoading();
-    },
+    didOpen: () => Swal.showLoading(),
   });
 
-  const url = "?sheet=sheet-1";
+
+  const sheetURL = "https://script.google.com/macros/s/AKfycbwVpUyG-s-CoH7OBO64NnjtH-gyDIvp67C8-pVCKga2cavbScGF15D_ScZhCOdQ93U/exec?sheet=confirm";
 
   try {
-    const res = await fetch(url, {
+    const res = await fetch(sheetURL, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({
         name,
         confirm,
         guest_number,
-        wish
+        wish,
       }),
     });
 
-    const result = await res.json().catch(() => ({}));
-    console.log("Server response:", result);
+    // Nếu server lỗi HTTP
+    if (!res.ok) {
+      throw new Error("Server response not OK");
+    }
+
+    const result = await res.json().catch(() => null);
+
+    if (!result) {
+      Swal.fire({
+        title: t.errorTitle,
+        text: t.errorServer,
+        icon: "error",
+        confirmButtonText: t.errorRetry,
+        confirmButtonColor: "#3c7fc2",
+      });
+      return;
+    }
 
     form.reset();
 
-    // Thông báo thành công
     Swal.fire({
-      title: "Thành công!",
-      text: "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha",
+      title: t.successTitle,
+      text: t.successText,
       icon: "success",
       confirmButtonText: "OK",
-      confirmButtonColor: "#000",
+      confirmButtonColor: "#3c7fc2",
     });
   } catch (error) {
     console.error("Error:", error);
 
-    // Thông báo lỗi
     Swal.fire({
-      title: "Lỗi!",
-      text: "OPPS! Đã xảy ra lỗi: " + error.message,
+      title: t.errorTitle,
+      text: error.message || t.errorServer,
       icon: "error",
-      confirmButtonText: "Thử lại",
-      confirmButtonColor: "#000",
+      confirmButtonText: t.errorRetry,
+      confirmButtonColor: "#3c7fc2",
     });
   }
 }
