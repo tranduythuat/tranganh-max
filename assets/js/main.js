@@ -129,7 +129,7 @@ function toggleQR(e) {
                       <p>Techcombank</p>
                   </div>
                   <div class="qrcode-img">
-                      <img src="assets/images/qrcode.jpg" alt="">
+                      <img src="assets/images/qrcode_brown_5a3a21.png" alt="">
                   </div>
               </div>
           </div>

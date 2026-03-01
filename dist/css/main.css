@@ -691,6 +691,7 @@ header {
   max-width: 432px;
   width: 100%;
   aspect-ratio: 432/184;
+  perspective: 1000px;
 }
 .photos .photo-grid .row .column {
   margin: 1.1%;
